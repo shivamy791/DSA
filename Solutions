@@ -11,27 +11,30 @@ class Solution
         int temp=0;
         while(mid<=high){
             switch(a[mid]){
-                        a[mid]=temp;
+                        
+                
+            case 0:{
+                    temp=a[low];
+                    a[low]=a[mid];
+                    a[mid]=temp;
                     low++;
                     mid++;
                     break;
-                }
-            case 0:{
-                    temp=a[0];
-                    a[0]=a[mid];
-                case 1:{
-                    mid++;
-                    break;
-                }
+            }
+            
+            case 1:{
+                mid++;
+                break;
+            }
                     
-                case 2:{
-                    temp=a[mid];
-                    a[mid]=a[high];
-                    a[high]=temp;
-                    high--;
-                    break;
-                }
+            case 2:{
+                temp=a[mid];
+                a[mid]=a[high];
+                a[high]=temp;
+                high--;
+                break;
+            }
             }
         }
     }
-}
+}  
